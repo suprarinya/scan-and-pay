@@ -1,0 +1,115 @@
+.cart-container {
+    width: 100%;
+    margin: auto;
+    background-color: #f8f0dd;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 100vh; 
+    padding: 80px 30px 20px 30px;
+
+  }
+  
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  
+  .cart-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .cart-items {
+    margin: 20px 0;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .cart-items::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .cart-item {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  }
+  
+  .cart-item img {
+    width: 100px;  /* Fixed width for the image */
+    height: 100px; /* Fixed height for the image */
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .item-info {
+    flex-grow: 1;
+  }
+  
+  .item-name {
+    font-weight: bold;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  
+  .item-meta {
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  .item-price {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.95rem;
+  }
+  
+  .order-summary {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  
+  .summary-row.discount span:last-child {
+    color: red;
+  }
+  
+  .summary-row.total {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  
+  .order-btn {
+    background-color: #DE9F6A;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .order-btn:hover {
+    background-color: #c88d55;
+  }
+  

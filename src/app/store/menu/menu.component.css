@@ -1,0 +1,250 @@
+/* General reset and layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .menu-container {
+    width: 100%;
+    height: 100vh; 
+    padding: 80px 30px 20px 30px;
+    background-color: #F4EEDE; 
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  /* Header Section (Location & Search) */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+  }
+  
+  .location h3 {
+    font-size: 0.9rem;
+    color: #DE9F6A; 
+    font-weight: bold;
+  }
+  
+  .location p {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .search-btn {
+    background-color: #DE9F6A;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    max-width: 40px;
+    max-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-icon {
+    width: 16px;  /* Icon width */
+    height: 16px;  /* Icon height */
+  }
+  
+  /* Styling for the Try to Test Button */
+.try-to-test {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .test-btn {
+    background-image: url('https://images.unsplash.com/photo-1558773126-45d7f59e4054?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+    background-size: cover; 
+    background-position: center;
+    color: white;
+    padding: 20px 40px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 15px; /* Round corners */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 80%; /* Use percentage to ensure it scales responsively */
+    min-width: 300px; /* Ensure the button doesn't collapse too small */
+    height: 150px; /* Define a height */
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  
+  .test-btn:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the image on hover for contrast */
+  }
+  
+  .button-text {
+    position: relative;
+    z-index: 1; /* Ensures the text appears above the background image */
+  }
+  
+  .test-btn:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  
+  
+  /* Beverages Section */
+  .beverages-section h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .beverages .beverage-btn {
+    background-color: #fdf9a7; /* Cosmic Latte */
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .beverages .beverage-btn.active {
+    background-color: #DE9F6A; /* Blue for active button */
+    color: white;
+  }
+  
+  .beverages .beverage-btn:hover {
+    background-color: #e9806e; /* Coral-Orange on hover */
+    color: white;
+  }
+  
+  /* Popular Bakeries Section */
+/* Popular Bakeries Container */
+.popular-bakeries {
+    margin-bottom: 15px;
+  }
+  
+  .popular-bakeries h6 {
+    font-size: 1.0rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Scrollable List of Bakery Items */
+  .bakeries-list {
+    max-height: 500px; /* Set the max height for the scrollable area */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between bakery items */
+    margin-bottom: 50px;
+  }
+  
+  /* Bakery Item Card Styling */
+  .bakery-item {
+    display: flex;
+    background-color: #F4EEDE;
+    /* padding: 10px; */
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.2s ease-in-out;
+    height: 110px;  /* Set a fixed height for each bakery item */
+  }
+  
+  .bakery-item:hover {
+    transform: translateY(-5px); /* Hover effect for visual feedback */
+  }
+  
+  /* Bakery Item Image */
+  .bakery-item img {
+    min-width: 100px;  /* Fixed width for the image */
+    max-height: 100px; /* Fixed height for the image */
+    border-radius: 8px;
+    object-fit: cover;  /* Ensures the image covers the area without distorting */
+    margin-right: 20px;  /* Space between image and text */
+  }
+  
+  /* Bakery Item Details */
+  .bakery-details {
+    flex-grow: 1;  /* Allow the details to grow and take up available space */
+  }
+  
+  .bakery-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .bakery-description {
+    font-size: 0.7rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .bakery-price {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #DE9F6A; /* Dark blue for price */
+    margin-top: 10px;
+  }
+  
+  .add-btn {
+    background-color: #DE9F6A;
+    color: white;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    max-width: 30px;
+    max-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add-btn:hover {
+    background-color: #c88d55; /* Darker shade on hover */
+  }
+
+  ::-webkit-scrollbar { display: none; }
+  
+  .menu-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .bakeries-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .bakeries-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .beverages .beverage-btn {
+      width: 100%;
+      font-size: 0.9rem;
+    }
+  
+    .test-btn {
+      width: 100%;
+      font-size: 1rem;
+    }
+  
+    .add-btn {
+      width: 100%;
+    }
+  }
+  

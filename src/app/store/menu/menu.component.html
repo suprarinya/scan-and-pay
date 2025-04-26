@@ -1,0 +1,62 @@
+<!-- menu.component.html -->
+<div class="menu-container">
+    <!-- Location and search section -->
+     <div>
+      <button class="btn btn-warning mb-2 p-2" (click)="goBack()">Back</button>
+     </div>
+     
+    <div class="header">
+      <div class="location">
+        <h3>Nawamin, Bangkok</h3>
+        <p>What would you like to order?</p>
+      </div>
+      <button class="search-btn">
+        <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-search search-icon" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+          </svg>
+      </button>
+    </div>
+  
+    <!-- "Try to test" button section -->
+    <div class="try-to-test">
+        <button class="test-btn">
+          <span class="button-text"></span>
+        </button>
+    </div>
+      
+  
+    <!-- Beverages Section -->
+    <!-- <div class="beverages-section">
+      <h5 style="font-weight: bold;">Beverages</h5>
+      <div class="beverages">
+        <button class="beverage-btn active">Phasellus</button>
+        <button class="beverage-btn">Phasellus</button>
+        <button class="beverage-btn">Phasellus</button>
+      </div>
+    </div> -->
+  
+    <!-- Popular Bakeries Section -->
+    <div class="popular-bakeries" >
+      <h6 >Popular Bakeries</h6>
+      <div class="bakeries-list">
+        <ng-container *ngFor="let item of menuList" >
+            <div class="bakery-item" (click)="toMenuItem(item)">
+                <img src="https://images.unsplash.com/photo-1607873736144-447d68ed29c4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bakery Image"> 
+                <div class="bakery-details">
+                  <p class="bakery-name">Pellentisque convallis</p>
+                  <p class="bakery-description">Maecenas malesuada risus non urna aliquet pellentesque.</p>
+                  <div class="row">
+                      <div class="col-9">
+                          <p class="bakery-price">45 Baht</p>
+                      </div>
+                      <div class="col-3">
+                          <!-- <button class="add-btn">+</button> -->
+                      </div>
+                  </div>
+                </div>
+              </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  

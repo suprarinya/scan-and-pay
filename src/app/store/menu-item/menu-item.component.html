@@ -1,0 +1,32 @@
+<div class="item-page">
+    <div class="item-image">
+        <button class="back-btn" onclick="history.back()">
+            &#8592; <!-- ← Unicode left arrow -->
+        </button>
+        <img src="https://images.unsplash.com/photo-1607873736144-447d68ed29c4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  alt="Cinnamon Rolls" />
+    </div>
+  
+    <div class="item-details">
+      <h3>Pellentesque convallis</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie sem in fermentum dignissim. Sed accumsan</p>
+  
+      <div class="options">
+        <h4>Options 1</h4>
+        <label><input type="checkbox" /> Lorem ipsum dolor sit amet, consectetur</label>
+        <label><input type="checkbox" /> Lorem ipsum dolor sit amet, consectetur</label>
+  
+        <h4>Options 2</h4>
+        <label><input type="checkbox" /> Lorem ipsum dolor sit amet, consectetur</label>
+        <label><input type="checkbox" /> Lorem ipsum dolor sit amet, consectetur</label>
+      </div>
+  
+      <div class="action-bar">
+        <button class="qty-btn" (click)="calcTotal('-')" [disabled]="totalItem <= 1">−</button>
+        <span class="qty">{{totalItem}}</span>
+        <button class="qty-btn" (click)="calcTotal('+')">+</button>
+        <button class="add-cart-btn" (click)="toCart(1)">Add to Cart</button>
+        <span class="price">$4</span>
+      </div>
+    </div>
+  </div>
+  

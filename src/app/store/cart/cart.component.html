@@ -1,0 +1,55 @@
+<div class="cart-container">
+    <div class="cart-header">
+      <h2>My Cart</h2>
+      <button class="close-btn" onclick="history.back()">&times;</button>
+    </div>
+
+
+  
+    <div class="cart-items">
+
+        <ng-container *ngFor="let item of menuList">
+            <div class="cart-item">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1452&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cinnamon Rolls" />
+                <div class="item-info">
+                    <p class="item-name">Pellentesque convallis</p>
+                    <p class="item-meta">x1</p>
+                </div>
+                <div class="item-price">$4</div>
+                </div>
+            
+                <div class="cart-item">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Croissant" />
+                <div class="item-info">
+                    <p class="item-name">Pellentesque convallis</p>
+                    <p class="item-meta">x1</p>
+                </div>
+                <div class="item-price">$4</div>
+                </div>
+        </ng-container>
+  
+
+
+
+    </div>
+  
+    <div class="order-summary">
+      <p>Order summary</p>
+      <div class="summary-row">
+        <span>Item total</span>
+        <span>$4.00</span>
+      </div>
+      <div class="summary-row discount">
+        <span>Discount</span>
+        <span>-$1.00</span>
+      </div>
+      <hr />
+      <div class="summary-row total">
+        <strong>Total</strong>
+        <strong>$3.00</strong>
+      </div>
+    </div>
+  
+    <button class="order-btn" (click)="toPayment(1)">Order Now</button>
+  </div>
+  

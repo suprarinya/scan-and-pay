@@ -1,0 +1,79 @@
+/* landing.component.css */
+
+/* Full-screen background */
+.landing-container {
+    background-image: url('https://images.unsplash.com/photo-1559811814-e2c57b5e69df?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;  /* Full screen */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Overlay background for better text visibility */
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);  /* 50% opacity black */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 80%;  /* Limit the width */
+  }
+  
+  /* Styling for the introduction text */
+  .intro-text {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Styling for the Get Started button */
+  .start-btn {
+    background-color: #DE9E61;  /* Butterscotch color */
+    color: #1D1D1D;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .start-btn:hover {
+    background-color: #c88d55;  
+    color: white;
+    font-weight: bold;
+
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .intro-text {
+      font-size: 1.5rem;  /* Reduce text size for smaller screens */
+    }
+  
+    .start-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  
+    .overlay {
+      max-width: 90%;  /* Allow more space for mobile */
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .intro-text {
+      font-size: 1.3rem;  /* Even smaller text size for mobile */
+    }
+  
+    .start-btn {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  

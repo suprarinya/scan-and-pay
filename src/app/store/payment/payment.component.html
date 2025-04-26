@@ -1,0 +1,19 @@
+<div class="payment-container">
+    <h2>Payment</h2>
+  
+    <div class="qr-box">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=example" alt="QR Code" />
+    </div>
+  
+    <div class="copy-link">
+      <a href="#" onclick="copyImage()">Copy Image</a>
+    </div>
+  
+    <p class="instruction">Please scan in your mobile app</p>
+  
+    <div class="update-status">
+      <a (click)="refreshStatus(1)">Update Status</a>
+      <span class="refresh-icon">&#x21bb;</span>
+    </div>
+  </div>
+  
