@@ -8,12 +8,17 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .item-image {
+    flex-shrink: 0; /* No shrinking */
   }
   
   .item-image img {
     width: 100%;
     height: auto;
-    min-height: 500px;
+    min-height: 300px;
     display: block;
   }
   
@@ -22,6 +27,8 @@
     background-color: #f9f4e5;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
   }
   
   .item-details h3 {

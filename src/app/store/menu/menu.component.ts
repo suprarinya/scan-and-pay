@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GetService } from '../../services/api/get.service';
+import { PostService } from '../../services/api/post.service';
 
 @Component({
   selector: 'app-menu',
@@ -11,15 +13,37 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
-export class MenuComponent {  
+export class MenuComponent implements OnInit {  
   menuList:any[] = Array.from({length: 8}, (_, index) => index + 1)
 
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private getService: GetService,
+    private postService: PostService
   ) {
 
+  }
+
+  ngOnInit(): void {
+    let storeId = 2
+    this.getService.getMenuItems(storeId).subscribe((data) => {
+      this.menuList = data
+      console.log('Menu items loaded:', this.menuList);
+    })
+  }
+
+  placeOrder() {
+    let order = {
+      items: [{ menu_item_id: 1, quantity: 2 }],
+      total_amount: 5.00
+    };
+
+    this.postService.createOrder(order).subscribe((res) => {
+      console.log('Order placed successfully!', res);
+      
+    })
   }
 
   goBack() {

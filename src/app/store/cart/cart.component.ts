@@ -16,7 +16,7 @@ export class CartComponent {
   
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ){
 
   }
