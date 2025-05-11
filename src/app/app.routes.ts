@@ -13,6 +13,6 @@ export const routes: Routes = [
     { path: 'store/:storeId/cart/:cartId', component: CartComponent },
     { path: 'store/:storeId/payment/:orderId', component: PaymentComponent },
     { path: 'store/:storeId/queue/:orderId', component: QueueComponent },
-    { path: '', redirectTo: '/store/1/landing', pathMatch: 'full' }, 
+    // { path: '', redirectTo: '/store/1/landing', pathMatch: 'full' }, 
     // { path: '**', component: NotFoundComponent }
 ];

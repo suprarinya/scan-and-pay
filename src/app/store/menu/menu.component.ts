@@ -15,7 +15,7 @@ import { PostService } from '../../services/api/post.service';
 })
 export class MenuComponent implements OnInit {  
   menuList:any[] = Array.from({length: 8}, (_, index) => index + 1)
-
+  storeId:string|null = null
 
   constructor(
     private router: Router,
@@ -27,8 +27,8 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let storeId = 2
-    this.getService.getMenuItems(storeId).subscribe((data) => {
+    this.storeId = this.route.snapshot.paramMap.get('storeId')
+    this.getService.getAllMenuItemsById(this.storeId).subscribe((data) => {
       this.menuList = data
       console.log('Menu items loaded:', this.menuList);
     })
@@ -42,7 +42,6 @@ export class MenuComponent implements OnInit {
 
     this.postService.createOrder(order).subscribe((res) => {
       console.log('Order placed successfully!', res);
-      
     })
   }
 
@@ -53,4 +52,6 @@ export class MenuComponent implements OnInit {
   toMenuItem(index:number){
     this.router.navigate([`store/1/menu/${index}`])
   }
+
+
 }

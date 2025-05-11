@@ -13,8 +13,12 @@ export class GetService {
     private http: HttpClient
   ) { }
 
-  getMenuItems(storeId: number): Observable<any> {
-    return this.http.get(`${this.BASE_URL}/get/menu-items/${storeId}`)
+  getAllMenuItemsById(storeId: string|null): Observable<any> {
+    return this.http.get(`${this.BASE_URL}/menus/${storeId}`)
+  }
+
+  getMenuItemsById(storeId: string|null): Observable<any> {
+    return this.http.get(`${this.BASE_URL}/menu-items/${storeId}`)
   }
 
   getOrderById(orderId: number): Observable<any> {
